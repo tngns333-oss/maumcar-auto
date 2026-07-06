@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마음카 | 마음에 쏙 드는 중고차 - 직영 중고차 매물</title>
+<meta name="description" content="마음카 - 마음에 쏙 드는 중고차. 유튜버가 직접 촬영·검증한 직영 중고차 매물. 제네시스 G80·GV80·G90, 벤츠 S클래스, 기아 카니발·모하비 등 실매물 다수. 대표상담 010-2218-2310.">
+<meta name="keywords" content="마음카, 중고차, 직영중고차, 직영인증중고차, 제네시스 중고차, GV80 중고차, G80 중고차, 벤츠 S클래스 중고차, 카니발 중고차, 모하비 중고차, 엠파크 중고차, 중고차 유튜버">
+<meta name="author" content="마음카">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="마음카">
+<meta property="og:title" content="마음카 | 마음에 쏙 드는 중고차">
+<meta property="og:description" content="유튜버가 직접 촬영·검증한 마음카 직영 중고차. 100% 실매물·직영인증. 대표상담 010-2218-2310.">
+<meta property="og:url" content="https://maumcar.netlify.app/">
+<meta property="og:image" content="https://maumcar.netlify.app/maumcar_logo.png">
+<meta name="naver-site-verification" content="1b830c1831e12422b3d3e3068770482c2c36ba4d">
+<meta name="google-site-verification" content="GLowHclQ5rTrqfTjgSIiOLYhYJMoUVKZ8xhJDKFYC4c">
+<link rel="canonical" href="https://maumcar.netlify.app/">
+<link rel="icon" type="image/png" href="__LOGO__">
+<style>
+  :root{
+    --brand:#ff5a6e; --brand-dark:#e23e54; --ink:#16181d; --muted:#6b7280;
+    --line:#e7e9ee; --bg:#f5f6f8; --card:#fff; --gold:#f5a623; --kakao:#fae100;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:12px;height:64px}
+  .brand-logo{display:flex;align-items:center;gap:8px;cursor:pointer}
+  .brand-logo img{width:46px;height:46px;display:block;object-fit:contain}
+  .brand-logo .wm{font-weight:900;font-size:22px;letter-spacing:-1.5px;color:var(--brand)}
+  .nav .tel{margin-left:auto;font-weight:800;font-size:18px;color:var(--brand)}
+  .nav .tel small{display:block;font-size:11px;font-weight:600;color:var(--muted);text-align:right}
+  .yt-link{background:#ff0000;color:#fff;padding:8px 12px;border-radius:8px;font-weight:700;font-size:13px}
+
+  .hero{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;padding:30px 0 28px;position:relative;overflow:hidden}
+  .hero .htext{position:relative;z-index:2}
+  .hero h1{font-size:27px;font-weight:900;letter-spacing:-1px;margin-bottom:6px}
+  .hero p{opacity:.92;font-size:15px}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+  .badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700}
+  .badge b{color:#fff2b0}
+  .stat{display:flex;gap:22px;margin-top:16px;flex-wrap:wrap}
+  .stat div{font-size:13px;opacity:.92}
+  .stat b{display:block;font-size:22px;font-weight:900}
+
+  .toolbar{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:-24px;position:relative;z-index:5;box-shadow:0 8px 24px rgba(20,30,60,.08)}
+  .toolbar .row{display:flex;gap:10px;flex-wrap:wrap}
+  .search{flex:1 1 240px;display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;padding:0 12px;background:#fafbfc}
+  .search input{border:0;background:none;outline:none;padding:12px 8px;font-size:15px;width:100%}
+  select{border:1px solid var(--line);border-radius:10px;padding:0 12px;height:46px;font-size:14px;background:#fafbfc;color:var(--ink);min-width:118px}
+  .chk{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--muted);padding:0 6px;cursor:pointer;white-space:nowrap}
+  .chk input{width:17px;height:17px;accent-color:var(--brand)}
+
+  .ytsec{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+  .ytsec h3{font-size:17px;font-weight:900;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .ytsec .yb{background:#ff0000;color:#fff;font-size:12px;padding:3px 8px;border-radius:6px}
+  .ytsec .frame{aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .ytsec .frame iframe{width:100%;height:100%;border:0;display:block}
+  .ytsec .placeholder{aspect-ratio:16/9;border-radius:10px;border:1.5px dashed var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);text-align:center;padding:16px}
+  .ytsec .chbtn{display:inline-block;background:#ff0000;color:#fff;font-weight:800;padding:11px 18px;border-radius:10px;font-size:14px}
+  .cats{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+  .cat-tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14.5px;font-weight:700;color:var(--muted);cursor:pointer;transition:.12s}
+  .cat-tab:hover{border-color:var(--brand)}
+  .cat-tab.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .cat-tab.deal.on{background:#ff3b30;border-color:#ff3b30}
+  .countrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 2px 12px;flex-wrap:wrap}
+  .count{font-size:14px;color:var(--muted)}
+  .count b{color:var(--brand);font-size:16px}
+  .sortbar{display:flex;gap:6px;flex-wrap:wrap}
+  .sortbar button{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;transition:.12s}
+  .sortbar button:hover{border-color:var(--brand);color:var(--brand)}
+  .sortbar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-bottom:50px}
+  .car{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:.15s}
+  .car:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,30,60,.12)}
+  .thumb{aspect-ratio:4/3;position:relative;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+  .thumb .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;text-align:center;padding:10px}
+  .thumb .cert{position:absolute;right:8px;top:8px;background:var(--gold);color:#1a1100;font-size:11px;font-weight:800;padding:3px 7px;border-radius:6px;z-index:2}
+  .car .info{padding:12px 13px 14px}
+  .car .nm{font-weight:800;font-size:14.5px;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .car .meta{color:var(--muted);font-size:12.5px;margin:5px 0 9px}
+  .car .price{font-weight:900;font-size:19px;color:var(--brand)}
+  .car .price small{font-size:12px;color:var(--muted);font-weight:600}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:60px 0}
+  .more{grid-column:1/-1;text-align:center;padding:8px 0 30px}
+  .more button{padding:13px 30px;border:1px solid var(--line);background:#fff;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer}
+
+  .modal{position:fixed;inset:0;background:rgba(10,15,30,.6);z-index:100;display:none;padding:20px;overflow:auto}
+  .modal.on{display:flex;align-items:flex-start;justify-content:center}
+  .sheet{background:#fff;border-radius:16px;max-width:760px;width:100%;margin:auto;overflow:hidden}
+  .sheet .top{position:relative}
+  .gallery{aspect-ratio:16/10;background-size:cover;background-position:center;background-color:#222;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;text-align:center;padding:14px}
+  .close{position:absolute;right:12px;top:12px;background:rgba(0,0,0,.5);color:#fff;border:0;width:38px;height:38px;border-radius:50%;font-size:20px;cursor:pointer;z-index:3}
+  .sheet .body{padding:20px}
+  .sheet h2{font-size:21px;font-weight:900;letter-spacing:-.5px}
+  .sheet .p2{font-size:25px;font-weight:900;color:var(--brand);margin:6px 0 14px}
+  .spec{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:14px}
+  .spec div{background:#fff;padding:11px 13px;font-size:13.5px;display:flex;justify-content:space-between}
+  .spec span{color:var(--muted)}.spec b{font-weight:700}
+  .opts{margin-bottom:14px}
+  .opts h4{font-size:14px;margin-bottom:9px}
+  .ochip{display:inline-block;background:#eef3ff;color:var(--brand);font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:8px;margin:0 6px 6px 0}
+  .perf{background:#fff5f6;border:1px solid #ffd9de;border-radius:12px;padding:14px 15px;margin-bottom:14px}
+  .perf h4{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .perf p{font-size:13px;color:#555;line-height:1.55}
+  .pfgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ffd9de;border:1px solid #ffd9de;border-radius:8px;overflow:hidden;margin-bottom:10px}
+  .pfgrid div{background:#fff;padding:9px 11px;font-size:13px;display:flex;justify-content:space-between}
+  .pfgrid span{color:var(--muted)} .pfgrid b{font-weight:700}
+  .pfgrid b.ok{color:#15a34a} .pfgrid b.warn{color:#e23e54}
+  .perf-btn{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;font-weight:700;font-size:13.5px;padding:9px 14px;border-radius:9px}
+  .legal{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  .legal summary{cursor:pointer;padding:12px 14px;font-size:14px;font-weight:800;background:#f7f8fa;list-style:none}
+  .legal summary::-webkit-details-marker{display:none}
+  .legal summary::after{content:' ▾';color:var(--muted)}
+  .legal[open] summary::after{content:' ▴'}
+  .legalgrid{padding:6px 14px 12px}
+  .legalgrid div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;font-size:12.5px;border-bottom:1px solid #f1f2f4}
+  .legalgrid div:last-child{border-bottom:0}
+  .legalgrid span{color:var(--muted);flex:0 0 auto}
+  .legalgrid b{font-weight:700;text-align:right}
+  .ytbtn{display:block;text-align:center;background:#ff0000;color:#fff;font-weight:800;padding:13px;border-radius:12px;margin-bottom:10px;font-size:15px}
+  .cta{display:flex;gap:10px;position:sticky;bottom:0;background:#fff;padding-top:6px}
+  .cta a{flex:1;text-align:center;padding:15px;border-radius:12px;font-weight:800;font-size:16px}
+  .cta .call{background:var(--brand);color:#fff}
+  .cta .sms{background:#eef0f3;color:var(--ink)}
+
+  footer{background:#16181d;color:#9aa1ad;font-size:13px;padding:26px 0 40px}
+  footer b{color:#fff}
+
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.spec{grid-template-columns:1fr}}
+  @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}.hero h1{font-size:21px}.yt-link{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand-logo" href="/" title="마음카 홈으로">
+      <img src="__LOGO__" alt="마음카">
+      <span class="wm">마음카</span>
+    </a>
+    <a class="yt-link" href="https://www.youtube.com/@mindcar" target="_blank">▶ 유튜브 마음카</a>
+    <div class="tel"><small>대표상담</small>010-2218-2310</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap htext">
+    <h1>마음에 쏙 드는 중고차, 마음카</h1>
+    <p>유튜버가 직접 촬영·검증한 마음카 직영 중고차</p>
+    <div class="badges">
+      <span class="badge"><b>허위매물 ZERO</b></span>
+      <span class="badge">100% 실매물</span>
+      <span class="badge">직영 인증점검</span>
+      <span class="badge">출고 후 무상점검</span>
+    </div>
+    <div class="stat">
+      <div><b id="statCount">—</b>보유 매물</div>
+      <div><b>100%</b>실매물 보장</div>
+      <div><b>365일</b>상담 가능</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="toolbar">
+    <div class="row">
+      <div class="search">🔍 <input id="q" placeholder="차량명·차량번호 검색 (예: G80, 카니발, 273가2123)"></div>
+      <select id="brand"></select>
+      <select id="model"></select>
+      <select id="type"></select>
+      <select id="fuel"></select>
+      <select id="price">
+        <option value="">가격 전체</option>
+        <option value="0-2000">2,000만원 이하</option>
+        <option value="2000-3000">2,000~3,000만원</option>
+        <option value="3000-4000">3,000~4,000만원</option>
+        <option value="4000-6000">4,000~6,000만원</option>
+        <option value="6000-999999">6,000만원 이상</option>
+      </select>
+      <select id="km">
+        <option value="">주행거리 전체</option>
+        <option value="0-30000">3만km 이하</option>
+        <option value="30000-60000">3~6만km</option>
+        <option value="60000-100000">6~10만km</option>
+        <option value="100000-9999999">10만km 이상</option>
+      </select>
+      <select id="year">
+        <option value="">연식 전체</option>
+        <option value="2024-2027">2024년~ (최신)</option>
+        <option value="2021-2024">2021~2023년</option>
+        <option value="2018-2021">2018~2020년</option>
+        <option value="0-2018">2017년 이전</option>
+      </select>
+      <select id="sort" style="display:none">
+        <option value="new">최신순</option>
+        <option value="plow">가격 낮은순</option>
+        <option value="phigh">가격 높은순</option>
+        <option value="km">주행거리 적은순</option>
+        <option value="year">연식 최신순</option>
+      </select>
+      <label class="chk"><input type="checkbox" id="noAcc"> 무사고만</label>
+      <label class="chk"><input type="checkbox" id="noConsult"> 가격상담 제외</label>
+    </div>
+  </div>
+
+  <section class="ytsec" id="ytsec"></section>
+
+  <div class="cats" id="cats"></div>
+  <div class="countrow">
+    <div class="count">검색결과 <b id="cnt">0</b>대</div>
+    <div class="sortbar" id="sortbar"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+
+<footer>
+  <div class="wrap">
+    <b>마음카</b> · 마음카 직영 중고차 (소속: 오토허브 엠파크지점) &nbsp;|&nbsp; 대표상담 010-2218-2310 &nbsp;|&nbsp; 카카오톡 @마음카<br>
+    매물 데이터: 카매니저 / 엠파크 연동 · 실시간 업데이트<br>
+    <span style="font-size:11px;opacity:.7">※ 마음카 매물 웹앱 시안. 가격은 광고금액 기준이며 실제 판매가는 상담 시 안내됩니다.</span>
+  </div>
+</footer>
+
+<script>
+/*__DATA__*/
+
+/* ============ 마음카 설정 — 이 부분만 수정하면 됩니다 ============ */
+const CONFIG={
+  tel:'010-2218-2310',                       // 대표상담 전화
+  kakao:'',                                  // 카카오톡 채널 주소 (예: https://pf.kakao.com/_xxxx)
+  youtube:'https://www.youtube.com/@mindcar',// 마음카 유튜브 채널 주소
+  mainVideo:'MQ6lhiKbqb4',                   // 현재 채널 트레일러 영상(백업): API 키 없이도 이 영상이 메인에 표시됩니다
+  // ▼ 채널 트레일러 자동 표시: ytApiKey만 채우면 유튜브에서 트레일러를 바꿔도 사이트에 자동 반영됩니다
+  channelId:'UC4Sr2WzfJu_fS9jf7yDn6yg',      // 마음카 채널 ID
+  ytApiKey:'AIzaSyAXpOxDFYyj5OUdDhJ2D4zy8_blAylX4kY',  // 유튜브 데이터 API 키
+  // 자동차 광고 의무표시용 판매자(종사원) 고정정보
+  seller:{ shop:'오토허브 엠파크지점', assoc:'한국자동차매매사업조합연합회', empName:'임수훈', empNo:'IM25-00720', tel:'010-2218-2310', tradeType:'알선' }
+};
+/* 차량별 영상 칸: '차량번호':'유튜브 링크' 형식으로 추가하면 그 매물 상세화면에 영상이 나옵니다 */
+const VIDEOS={
+  // '273가2123':'https://youtu.be/영상ID',
+  // '119가1373':'https://youtu.be/영상ID',
+};
+/* ============================================================ */
+function ytId(u){ if(!u)return''; const m=String(u).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/); return m?m[1]:(/^[\w-]{11}$/.test(String(u).trim())?String(u).trim():''); }
+
+const CATS=[{key:'all',label:'마음카 직영 중고차'},{key:'특가',label:'🔥 특가 차량'}];
+let curCat='all', shown=40;
+
+function fillSelect(id,label,key){
+  const el=document.getElementById(id);
+  const vals=[...new Set(CARS.map(c=>c[key]))].sort();
+  el.innerHTML=`<option value="">${label}</option>`+vals.map(v=>`<option>${v}</option>`).join('');
+}
+fillSelect('brand','제조사 전체','brand');
+fillSelect('type','차종 전체','type');
+fillSelect('fuel','연료 전체','fuel');
+
+function populateModels(){
+  const b=document.getElementById('brand').value;
+  const el=document.getElementById('model');
+  const pool=b?CARS.filter(c=>c.brand===b):CARS;
+  const models=[...new Set(pool.map(c=>c.model))].filter(Boolean).sort();
+  el.innerHTML='<option value="">모델 전체</option>'+models.map(m=>`<option>${m}</option>`).join('');
+}
+populateModels();
+document.getElementById('brand').addEventListener('input',()=>{populateModels();shown=40;render();});
+
+const won=n=>(!n||n<100)?'가격상담':n>=10000?`${(n/10000).toFixed(n%10000?1:0)}억`:`${n.toLocaleString()}만원`;
+const km=n=>n>=10000?`${(n/10000).toFixed(1)}만km`:`${n.toLocaleString()}km`;
+
+function filtered(){
+  const nsp=s=>String(s).replace(/\s/g,'');
+  const q=nsp(document.getElementById('q').value.trim());
+  const b=document.getElementById('brand').value, md=document.getElementById('model').value, t=document.getElementById('type').value;
+  const f=document.getElementById('fuel').value, p=document.getElementById('price').value;
+  const kmR=document.getElementById('km').value, yrR=document.getElementById('year').value;
+  const noConsult=document.getElementById('noConsult').checked;
+  const noAcc=document.getElementById('noAcc').checked;
+  const s=document.getElementById('sort').value;
+  let list=CARS.filter(c=>{
+    if(curCat!=='all' && c.cat!==curCat) return false;
+    if(q && !nsp(c.name).includes(q) && !nsp(c.brand).includes(q) && !nsp(c.id).includes(q)) return false;
+    if(b && c.brand!==b) return false;
+    if(md && c.model!==md) return false;
+    if(t && c.type!==t) return false;
+    if(f && c.fuel!==f) return false;
+    if(p){const[lo,hi]=p.split('-').map(Number); const pr=c.price||0; if(pr<lo||pr>=hi) return false;}
+    if(kmR){const[lo,hi]=kmR.split('-').map(Number); if(c.km<lo||c.km>=hi) return false;}
+    if(yrR){const[lo,hi]=yrR.split('-').map(Number); if(c.year<lo||c.year>=hi) return false;}
+    if(noConsult && (!c.price||c.price<100)) return false;
+    if(noAcc && c.noacc!==true) return false;
+    return true;
+  });
+  const srt={plow:(a,b)=>(a.price||999999)-(b.price||999999),phigh:(a,b)=>(b.price||0)-(a.price||0),km:(a,b)=>a.km-b.km,year:(a,b)=>b.year-a.year,new:()=>0};
+  list.sort(srt[s]);
+  return list;
+}
+
+function render(){
+  const list=filtered();
+  document.getElementById('cnt').textContent=list.length;
+  const g=document.getElementById('grid');
+  if(!list.length){g.innerHTML='<div class="empty">조건에 맞는 매물이 없습니다.</div>';return;}
+  const page=list.slice(0,shown);
+  g.innerHTML=page.map(c=>{
+    const bg=c.img?`background-image:url('${c.img}')`:`background:linear-gradient(135deg,${c.c2},#0b1220)`;
+    const ph=c.img?'':`<div class="ph">${c.name}</div>`;
+    const cert=c.cat==='특가'?`<span class="cert" style="background:#ff3b30;color:#fff">🔥 특가</span>`:`<span class="cert">직영인증</span>`;
+    return `<div class="car" onclick="openCar('${c.id}')">
+      <div class="thumb" style="${bg}">${cert}${ph}</div>
+      <div class="info">
+        <div class="nm">${c.name}</div>
+        <div class="meta">${c.yymm} · ${km(c.km)} · ${c.fuel}${c.noacc===true?' · <b style="color:#15a34a">무사고</b>':''}</div>
+        <div class="price">${won(c.price)} <small>· ${c.id}</small></div>
+      </div></div>`;
+  }).join('')+(list.length>shown?`<div class="more"><button onclick="shown+=40;render()">매물 더보기 (${list.length-shown}대 남음)</button></div>`:'');
+}
+
+function openCar(id){
+  const c=CARS.find(x=>x.id===id);
+  const bg=c.img?`background-image:url('${c.img}')`:`background:linear-gradient(135deg,${c.c2},#0b1220)`;
+  document.getElementById('sheet').innerHTML=`
+    <div class="top">
+      <div class="gallery" style="${bg}">${c.img?'':c.name}</div>
+      <button class="close" onclick="closeCar()">×</button>
+    </div>
+    <div class="body">
+      <h2>${c.name}</h2>
+      <div class="p2">${won(c.price)}</div>
+      <div class="spec">
+        <div><span>연식</span><b>${c.yymm}</b></div>
+        <div><span>주행거리</span><b>${c.km.toLocaleString()}km</b></div>
+        <div><span>연료</span><b>${c.fuel}</b></div>
+        <div><span>변속기</span><b>${c.gear}</b></div>
+        <div><span>차종</span><b>${c.type}</b></div>
+        <div><span>제조사</span><b>${c.brand}</b></div>
+        <div><span>관리번호</span><b>${c.id}</b></div>
+        <div><span>구분</span><b>마음카 직영매물</b></div>
+      </div>
+      ${c.opts&&c.opts.length?`<div class="opts"><h4>주요 옵션</h4>${c.opts.map(o=>`<span class="ochip">${o}</span>`).join('')}</div>`:''}
+      <div class="perf">
+        <h4>🛡️ 성능점검 기록 <span style="font-size:11px;font-weight:600;color:#999">국가공인 성능점검기록부 기준</span></h4>
+        ${c.pf ? `
+        <div class="pfgrid">
+          <div><span>사고이력</span><b class="${c.pf.acc?'ok':'warn'}">${c.pf.acc?'무사고':'사고이력 있음'}</b></div>
+          <div><span>침수</span><b class="${c.pf.water?'warn':'ok'}">${c.pf.water?'있음':'없음'}</b></div>
+          <div><span>단순수리</span><b>${c.pf.repair?'있음':'없음'}</b></div>
+          <div><span>검사유효기간</span><b>${c.pf.valid||'-'}</b></div>
+        </div>
+        ${c.pf.pdf?`<a class="perf-btn" href="${c.pf.pdf}" target="_blank">📄 성능점검기록부(PDF) 원본 보기</a>`:''}
+        <p style="margin-top:8px;font-size:11.5px;color:#888">※ 보험이력(소유·사고이력)은 상담 시 카히스토리로 함께 확인해 드립니다.</p>
+        ` : `<p>이 차량의 성능점검기록부는 상담 시 확인해 드립니다.</p>
+        <a class="perf-btn" href="sms:${(c.phone||CONFIG.tel).replace(/-/g,'')}?body=[마음카] ${c.id} ${c.name} 성능점검기록부 요청합니다">성능점검기록부 받아보기</a>`}
+      </div>
+      <details class="legal">
+        <summary>📋 자동차 광고 의무표시 사항 (자동차관리법)</summary>
+        <div class="legalgrid">
+          <div><span>① 차량등록번호</span><b>${c.id}</b></div>
+          <div><span>② 주요제원</span><b>${c.yymm} · ${c.km.toLocaleString()}km · ${c.fuel} · ${c.gear} · ${c.type}</b></div>
+          <div><span>② 선택적 장치(옵션)</span><b>${c.opts&&c.opts.length?c.opts.join(', '):'성능·상태점검기록부 참조'}</b></div>
+          <div><span>③ 압류·저당</span><b>${c.pf&&c.pf.pdf?'성능·상태점검기록부 참조':'상담 시 확인'}</b></div>
+          <div><span>④ 성능·상태점검기록부</span><b>${c.pf&&c.pf.pdf?`<a href="${c.pf.pdf}" target="_blank" style="color:var(--brand);font-weight:700">PDF 확인</a>`:'상담 시 제공'}</b></div>
+          <div><span>⑤ 제시(전시)신고번호</span><b>${c.demo||'성능·상태점검기록부 참조'}</b></div>
+          <div><span>⑥ 매매업자</span><b>${CONFIG.seller.shop}</b></div>
+          <div><span>⑥ 매매사업조합</span><b>${CONFIG.seller.assoc}</b></div>
+          <div><span>⑦ 종사원</span><b>${CONFIG.seller.empName} (사원증 ${CONFIG.seller.empNo})</b></div>
+          <div><span>⑦ 연락처</span><b>${CONFIG.seller.tel}</b></div>
+          <div><span>⑦ 매매유형</span><b>${CONFIG.seller.tradeType}</b></div>
+        </div>
+      </details>
+      ${VIDEOS[c.id]&&ytId(VIDEOS[c.id])
+        ? `<div class="frame" style="aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px"><iframe style="width:100%;height:100%;border:0" src="https://www.youtube.com/embed/${ytId(VIDEOS[c.id])}" allowfullscreen></iframe></div>`
+        : `<a class="ytbtn" href="${CONFIG.youtube}" target="_blank">▶ 마음카 유튜브에서 이 차 영상 보기</a>`}
+      <div class="cta">
+        <a class="call" href="tel:${c.phone||CONFIG.tel}">📞 마음카 전화상담</a>
+        ${CONFIG.kakao?`<a class="sms" style="background:#fae100;color:#3a1d1d" href="${CONFIG.kakao}" target="_blank">💬 카톡</a>`:''}
+        <a class="sms" href="sms:${(c.phone||CONFIG.tel).replace(/-/g,'')}?body=[마음카] ${c.id} ${c.name} 문의합니다">✉️ 문자</a>
+      </div>
+    </div>`;
+  document.getElementById('modal').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeCar(){document.getElementById('modal').classList.remove('on');document.getElementById('sheet').innerHTML='';document.body.style.overflow='';}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeCar()});
+
+function renderCats(){
+  document.getElementById('cats').innerHTML=CATS.map(t=>{
+    const n=t.key==='all'?CARS.length:CARS.filter(c=>c.cat===t.key).length;
+    return `<button class="cat-tab ${t.key==='특가'?'deal':''} ${curCat===t.key?'on':''}" onclick="setCat('${t.key}')">${t.label} ${n}</button>`;
+  }).join('');
+}
+function setCat(k){curCat=k;shown=40;renderCats();render();}
+
+const SORTS=[{v:'new',t:'최신순'},{v:'plow',t:'가격 낮은순'},{v:'phigh',t:'가격 높은순'},{v:'year',t:'최근 연식순'},{v:'km',t:'주행거리 적은순'}];
+function renderSort(){
+  const cur=document.getElementById('sort').value;
+  document.getElementById('sortbar').innerHTML=SORTS.map(s=>`<button class="${cur===s.v?'on':''}" onclick="setSort('${s.v}')">${s.t}</button>`).join('');
+}
+function setSort(v){document.getElementById('sort').value=v;shown=40;renderSort();render();}
+
+['q','model','type','fuel','price','km','year','sort','noConsult','noAcc'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{shown=40;render();}));
+async function renderYt(){
+  const el=document.getElementById('ytsec');
+  const head=`<h3><span class="yb">▶ YouTube</span> 마음카 채널 트레일러</h3>`;
+  let id='';
+  // 1) 유튜브에 설정한 '비구독자 대상 채널 트레일러' 자동 불러오기 (API 키 설정 시)
+  if(CONFIG.ytApiKey && CONFIG.channelId){
+    try{
+      const r=await fetch(`https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id=${CONFIG.channelId}&key=${CONFIG.ytApiKey}`);
+      const j=await r.json();
+      id=(j.items&&j.items[0]&&j.items[0].brandingSettings&&j.items[0].brandingSettings.channel&&j.items[0].brandingSettings.channel.unsubscribedTrailer)||'';
+    }catch(e){}
+  }
+  // 2) 백업: 수동 지정 영상
+  if(!id) id=ytId(CONFIG.mainVideo);
+  if(id){
+    el.innerHTML=head+`<div class="frame"><iframe src="https://www.youtube.com/embed/${id}?rel=0" allowfullscreen></iframe></div>`;
+  }else{
+    el.innerHTML=head+`<div class="placeholder">🎬 채널 트레일러를 자동 연결하려면 코드 상단 CONFIG의 channelId·ytApiKey를 입력하세요.<a class="chbtn" href="${CONFIG.youtube}" target="_blank">마음카 유튜브 채널 바로가기</a></div>`;
+  }
+}
+
+document.getElementById('statCount').textContent=CARS.length+'대';
+renderCats();renderSort();render();renderYt();
+</script>
+</body>
+</html>
