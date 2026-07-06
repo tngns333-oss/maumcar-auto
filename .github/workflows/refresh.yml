@@ -1,0 +1,25 @@
+name: 마음카 매물 자동 갱신
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 체크아웃
+        uses: actions/checkout@v4
+      - name: Node 설치
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 매물 수집 + 빌드
+        env:
+          MEGAM_REFRESH_TOKEN: ${{ secrets.MEGAM_REFRESH_TOKEN }}
+        run: node build-and-deploy.mjs
+      - name: Netlify 배포
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npm install -g netlify-cli
+          netlify deploy --prod --dir=dist --site=9262d8c2-bc30-4f74-962f-1b6e6d29c725
