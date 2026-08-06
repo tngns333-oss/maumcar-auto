@@ -1,7 +1,8 @@
 // 마음카 매물 자동 갱신 스크립트 (서버용, 비밀번호 불필요)
 // 실행: node build-and-deploy.mjs   (Node 18+ 필요 — 내장 fetch 사용)
-// 필요 환경변수(GitHub Secrets):
-//   MEGAM_REFRESH_TOKEN : 메가엠 refreshToken 쿠키 값
+// 필요 환경변수(GitHub Secrets) — 둘 중 하나:
+//   (권장·무기한) MEGAM_ID + MEGAM_PW : 메가엠 아이디/비밀번호 → 매 실행마다 자동 로그인
+//   (구방식·만료됨) MEGAM_REFRESH_TOKEN : 메가엠 refreshToken 쿠키 값
 // 결과물: ./dist/index.html (+ 로고·robots·sitemap) → Netlify 배포는 워크플로에서 처리
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,16 +13,35 @@ const DANJI = '10,11,15';                  // 엠파크 단지코드(랜드/타�
 const SELLER = { shop:'오토허브 엠파크지점', assoc:'한국자동차매매사업조합연합회', empName:'임수훈', empNo:'IM25-00720', tel:'010-2218-2310', tradeType:'알선' };
 const OWN_EMP = '임수훈';                    // 이 종사원 매물 = 특가
 
+const ID = process.env.MEGAM_ID;
+const PW = process.env.MEGAM_PW;
 const RT = process.env.MEGAM_REFRESH_TOKEN;
-if (!RT) { console.error('MEGAM_REFRESH_TOKEN 환경변수가 없습니다.'); process.exit(1); }
+if (!((ID && PW) || RT)) { console.error('MEGAM_ID+MEGAM_PW 또는 MEGAM_REFRESH_TOKEN 환경변수가 필요합니다.'); process.exit(1); }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-async function getAccessToken() {
+// 아이디/비밀번호로 자동 로그인 → accessToken 취득 (만료 없음: 비번 안 바꾸는 한 계속 동작)
+async function loginForToken() {
+  const r = await fetch(`${API}/comm/login`, {
+    method:'POST', headers:{ 'Content-Type':'application/json' },
+    body: JSON.stringify({ loginPage:'M', userId: ID, userPass: PW })
+  });
+  const j = await r.json();
+  if (j.statusCode !== 0 || !j.data?.accessToken) throw new Error('자동 로그인 실패(아이디/비밀번호 확인): ' + (j.responseMessage||''));
+  return j.data.accessToken;
+}
+
+// 구방식: refreshToken으로 accessToken 재발급
+async function refreshForToken() {
   const r = await fetch(`${API}/comm/refreshToken`, { method:'POST', headers:{ Authorization:`Bearer ${RT}` } });
   const j = await r.json();
   if (j.statusCode !== 0 || !j.data?.accessToken) throw new Error('토큰 재발급 실패(refreshToken 만료?): ' + (j.responseMessage||''));
   return j.data.accessToken;
+}
+
+async function getAccessToken() {
+  if (ID && PW) return await loginForToken();   // 우선: 자동 로그인
+  return await refreshForToken();               // 대체: refreshToken
 }
 
 async function getListings(at) {
