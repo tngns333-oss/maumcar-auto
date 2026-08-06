@@ -12,7 +12,7 @@ jobs:
       - name: Node 설치
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - name: 매물 수집 + 빌드
         env:
           MEGAM_REFRESH_TOKEN: ${{ secrets.MEGAM_REFRESH_TOKEN }}
